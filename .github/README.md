@@ -1,10 +1,10 @@
 # UE5Coro
 
-[English](README.md) | 简体中文
+[English](../README.md) | 简体中文
 
 > [!NOTE]
 > 本文是 [UE5Coro](https://github.com/landelare/ue5coro) 英文文档的非官方中文译文，
-> 如有出入以[英文原文](README.md)为准。版权与许可见 [COPYING](COPYING)。
+> 如有出入以[英文原文](../README.md)为准。版权与许可见 [COPYING](../COPYING)。
 
 UE5Coro 为 Unreal Engine 5 实现了 C++20
 [协程](https://en.cppreference.com/w/cpp/language/coroutines)支持，着重于
@@ -40,7 +40,7 @@ latent 协程会自动追踪它的目标 UObject，必要时提前清理。
 
 就连协程的返回类型也对蓝图隐藏了，不会打扰到策划：
 
-![上面 Example 函数对应的 latent 蓝图节点](Docs/latent_node.png)
+![上面 Example 函数对应的 latent 蓝图节点](../Docs/latent_node.png)
 
 对 latent UFUNCTION 不感兴趣？
 没关系。
@@ -99,28 +99,28 @@ N 个元素只需要 O(1) 而不是 O(N) 的存储，有什么理由不喜欢呢
 
 这些功能侧重于把协程暴露给引擎的其他部分。
 
-* [协程](Docs/zh-CN/Coroutine.md)（显而易见）
-  * [取消](Docs/zh-CN/Cancellation.md)支持有单独的页面。
-* [生成器](Docs/zh-CN/Generator.md)
-* [Gameplay Ability System](Docs/zh-CN/GAS.md) 集成的工作方式略有不同。
+* [协程](../Docs/zh-CN/Coroutine.md)（显而易见）
+  * [取消](../Docs/zh-CN/Cancellation.md)支持有单独的页面。
+* [生成器](../Docs/zh-CN/Generator.md)
+* [Gameplay Ability System](../Docs/zh-CN/GAS.md) 集成的工作方式略有不同。
 <!-- 另有一个未列出的文档页面：Private.md -->
 
 ## Unreal 集成
 
 这些封装让你可以在协程中方便地使用引擎功能。
 
-* [AI](Docs/zh-CN/AI.md) 集成（MoveTo、寻路……）
-* [动画 awaiter](Docs/zh-CN/Animation.md)（蒙太奇、通知……）
-* [异步 awaiter](Docs/zh-CN/Async.md)（多线程、同步……）
-  * [异步链](Docs/zh-CN/AsyncChain.md)（适用于接受委托参数的函数的通用封装）
-* [HTTP](Docs/zh-CN/Http.md)（异步 HTTP 请求）
-* [隐式 awaiter](Docs/zh-CN/Implicit.md)（某些引擎类型无需封装即可直接 co_await）
-* [Latent awaiter](Docs/zh-CN/Latent.md)（与游戏线程交互、Delay……）
-  * [资产加载](Docs/zh-CN/LatentLoad.md)（异步加载软指针、资产包……）
-  * [异步碰撞查询](Docs/zh-CN/LatentCollision.md)（射线检测、重叠检测……）
-  * [Latent 链](Docs/zh-CN/LatentChain.md)（通用的 latent 动作封装）
-  * [Tick 时间预算](Docs/zh-CN/LatentTickTimeBudget.md)（每帧运行 x 毫秒）
-* [Latent 回调](Docs/zh-CN/LatentCallback.md)（与 latent 动作管理器交互）
+* [AI](../Docs/zh-CN/AI.md) 集成（MoveTo、寻路……）
+* [动画 awaiter](../Docs/zh-CN/Animation.md)（蒙太奇、通知……）
+* [异步 awaiter](../Docs/zh-CN/Async.md)（多线程、同步……）
+  * [异步链](../Docs/zh-CN/AsyncChain.md)（适用于接受委托参数的函数的通用封装）
+* [HTTP](../Docs/zh-CN/Http.md)（异步 HTTP 请求）
+* [隐式 awaiter](../Docs/zh-CN/Implicit.md)（某些引擎类型无需封装即可直接 co_await）
+* [Latent awaiter](../Docs/zh-CN/Latent.md)（与游戏线程交互、Delay……）
+  * [资产加载](../Docs/zh-CN/LatentLoad.md)（异步加载软指针、资产包……）
+  * [异步碰撞查询](../Docs/zh-CN/LatentCollision.md)（射线检测、重叠检测……）
+  * [Latent 链](../Docs/zh-CN/LatentChain.md)（通用的 latent 动作封装）
+  * [Tick 时间预算](../Docs/zh-CN/LatentTickTimeBudget.md)（每帧运行 x 毫秒）
+* [Latent 回调](../Docs/zh-CN/LatentCallback.md)（与 latent 动作管理器交互）
 
 > [!NOTE]
 > 这些函数大多返回 `UE5Coro::Private` 命名空间中未写入文档的内部类型。
@@ -137,11 +137,11 @@ N 个元素只需要 O(1) 而不是 O(N) 的存储，有什么理由不喜欢呢
 
 ## 其他功能
 
-* [聚合 awaiter](Docs/zh-CN/Aggregate.md)（WhenAny、WhenAll、Race……）
-* [Latent 时间轴](Docs/zh-CN/LatentTimeline.md)（在 tick 上平滑插值）
-* [线程原语](Docs/zh-CN/Threading.md)（信号量、事件……）
-* [Gameplay Debugger](Docs/zh-CN/GameplayDebugger.md) 集成以及
-  [本地化](Docs/zh-CN/GameplayDebugger.md#the-conditional-modifier)工具
+* [聚合 awaiter](../Docs/zh-CN/Aggregate.md)（WhenAny、WhenAll、Race……）
+* [Latent 时间轴](../Docs/zh-CN/LatentTimeline.md)（在 tick 上平滑插值）
+* [线程原语](../Docs/zh-CN/Threading.md)（信号量、事件……）
+* [Gameplay Debugger](../Docs/zh-CN/GameplayDebugger.md) 集成以及
+  [本地化](../Docs/zh-CN/GameplayDebugger.md#the-conditional-modifier)工具
 
 # 安装
 

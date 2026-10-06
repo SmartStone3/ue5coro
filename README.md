@@ -1,6 +1,6 @@
 # UE5Coro
 
-English | [简体中文](README.zh-CN.md)
+English | [简体中文](.github/README.md)
 
 UE5Coro implements C++20
 [coroutine](https://en.cppreference.com/w/cpp/language/coroutines) support for
