@@ -1,5 +1,7 @@
 # UE5Coro
 
+English | [简体中文](README.zh-CN.md)
+
 UE5Coro implements C++20
 [coroutine](https://en.cppreference.com/w/cpp/language/coroutines) support for
 Unreal Engine 5 with a focus on gameplay logic, convenience, and providing
